@@ -1,5 +1,44 @@
-main {
-  text-align: center;
-  vertical-align: center;
-  line-height: 100vh
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: monospace;
+}
+
+body{
+  height: 100vh;
+  background-color: ghostwhite;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-pad{
+  height: 80px;
+  width: 80px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#pads{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  width: 50%;
+}
+
+#drum-machine{
+  width: 600px;
+  height: 400px;
+  background-color: grey;  
+}
+
+#display{
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: ghostwhite;
 }
