@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   font-family: monospace;
+  user-select: none;
 }
 
 body{
@@ -22,14 +23,15 @@ body{
   border-radius: 10px;
   cursor: pointer;
   font-size: 30px;
+  background-color: grey;
 }
 
 #pads{
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  grid-template-columns: repeat(3, 1fr);
   width:100%;
 }
 
@@ -46,6 +48,6 @@ body{
   width: 150px;
   height: 50px;
   background-color: grey;
-  color: ghostwhite;
   margin: 80px;
+  border: 3px solid black;
 }
