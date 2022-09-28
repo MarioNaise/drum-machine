@@ -16,29 +16,36 @@ body{
 }
 
 .drum-pad{
-  height: 80px;
-  width: 80px;
+  height: 80%;
+  width: 80%;
   border: 1px solid black;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 30px;
 }
 
 #pads{
   display: grid;
-  gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 100%;
-  width: 50%;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width:100%;
 }
 
 #drum-machine{
-  width: 600px;
-  height: 400px;
-  background-color: grey;  
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  width: 800px;
+  height: 500px;
+  background-color: darkgrey;  
 }
 
 #display{
   width: 150px;
   height: 50px;
-  background-color: black;
+  background-color: grey;
   color: ghostwhite;
+  margin: 80px;
 }
