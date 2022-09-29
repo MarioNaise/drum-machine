@@ -46,11 +46,20 @@ class DrumPad extends React.Component {
     document.addEventListener("keydown", this.handleKey)
     const thisPad = data.find(pad => pad.text==this.props.text);
     this.setState({
-      pad: thisPad
+      pad: thisPad,
+      active: false
     });
   }
 
   playSound(){
+    this.setState({
+      active: true
+    });
+    setTimeout(()=>{
+      this.setState({
+      active: false
+    });
+    }, 100);
     const sound = document.getElementById(this.state.pad.text);
     sound.play();
     sound.currentTime = 0;
@@ -64,7 +73,7 @@ class DrumPad extends React.Component {
   }
 
   render(){
-    return (<div id={this.state.pad.name} className="drum-pad flex" onClick={this.playSound}>
+    return (<div id={this.state.pad.name} className="drum-pad flex" onClick={this.playSound} style={{backgroundColor: this.state.active && "orange"}}>
       <audio className="clip" id={this.state.pad.text} src={this.state.pad.audio}></audio>
       {this.props.text}
     </div>)};
