@@ -15,6 +15,11 @@ export default class App extends React.Component {
     this.setState({
       display: name
     });
+    setTimeout(()=>{
+      this.setState({
+      display: ""
+    });
+    },1000);
   }
   
   render (){
@@ -73,7 +78,7 @@ class DrumPad extends React.Component {
   }
 
   render(){
-    return (<div id={this.state.pad.name} className="drum-pad flex" onClick={this.playSound} style={{backgroundColor: this.state.active && "orange"}}>
+    return (<div id={this.state.pad.name} className="drum-pad flex" onClick={this.playSound} style={{backgroundColor: this.state.active && "orange", boxShadow: this.state.active && "10px 10px 30px -7px rgba(0,0,0,0.8) inset"}}>
       <audio className="clip" id={this.state.pad.text} src={this.state.pad.audio}></audio>
       {this.props.text}
     </div>)};

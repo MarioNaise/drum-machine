@@ -26,10 +26,6 @@ body{
   background-color: grey;
 }
 
-.active{
-  background-color: orange;
-}
-
 #pads{
   display: grid;
   justify-items: center;
