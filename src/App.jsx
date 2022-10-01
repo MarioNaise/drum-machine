@@ -78,7 +78,7 @@ class DrumPad extends React.Component {
   }
 
   render(){
-    return (<div id={this.state.pad.name} className="drum-pad flex" onClick={this.playSound} style={{backgroundColor: this.state.active && "orange", boxShadow: this.state.active && "10px 10px 30px -7px rgba(0,0,0,0.8) inset"}}>
+    return (<div id={this.state.pad.name} className="drum-pad flex" onClick={this.playSound} style={{backgroundColor: this.state.active && "orange", boxShadow: this.state.active && "1px 1px 2px 1px rgba(0,0,0,0.8) inset"}}>
       <audio className="clip" id={this.state.pad.text} src={this.state.pad.audio}></audio>
       {this.props.text}
     </div>)};
