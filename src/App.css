@@ -1,22 +1,22 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   font-family: monospace;
   user-select: none;
 }
 
-body{
+body {
   height: 100vh;
   background-color: ghostwhite;
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.drum-pad{
+.drum-pad {
   height: 80%;
   width: 80%;
   border: 1px solid black;
@@ -26,26 +26,26 @@ body{
   background-color: grey;
 }
 
-#pads{
+#pads {
   display: grid;
   justify-items: center;
   align-items: center;
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
-  width:100%;
+  width: 100%;
 }
 
-#drum-machine{
-  display:grid;
+#drum-machine {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   width: 800px;
   height: 500px;
-  background-color: darkgrey;  
+  background-color: darkgrey;
   border: 3px solid black;
 }
 
-#display{
+#display {
   width: 150px;
   height: 50px;
   background-color: grey;
