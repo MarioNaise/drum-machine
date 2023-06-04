@@ -24,6 +24,7 @@ body {
   cursor: pointer;
   font-size: 30px;
   background-color: grey;
+  box-shadow: 2px 2px 5px black;
 }
 
 #pads {
@@ -42,7 +43,33 @@ body {
   width: 800px;
   height: 500px;
   background-color: darkgrey;
-  border: 3px solid black;
+  outline: 1px solid black;
+  transform-style: preserve-3d;
+  box-shadow: 20px 20px 50px black;
+}
+
+#drum-machine::before {
+  content: "";
+  width: 20px;
+  height: 500px;
+  background: inherit;
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  outline: inherit;
+  transform: skewY(45deg);
+}
+
+#drum-machine::after {
+  content: "";
+  width: 800px;
+  height: 20px;
+  background: inherit;
+  position: absolute;
+  bottom: -21px;
+  left: 10px;
+  outline: inherit;
+  transform: skewX(45deg);
 }
 
 #display {
@@ -50,5 +77,6 @@ body {
   height: 50px;
   background-color: grey;
   margin: 80px;
-  border: 3px solid black;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px black;
 }

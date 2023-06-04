@@ -36,7 +36,7 @@ export default function DrumPad(props) {
       onClick={playSound}
       style={{
         backgroundColor: active && "orange",
-        boxShadow: active && "1px 1px 2px 1px rgba(0,0,0,0.8) inset",
+        boxShadow: active && "2px 2px 1px black",
       }}
     >
       <audio className="clip" id={pad.text} src={pad.audio}></audio>
